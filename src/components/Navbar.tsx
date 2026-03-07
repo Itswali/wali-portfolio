@@ -1,33 +1,45 @@
-import { Home, User, Briefcase, Sun } from 'lucide-react';
-// import { motion } from 'framer-motion';
+import { Link, useLocation } from "react-router-dom";
+import { Home, User, Briefcase, Sun } from "lucide-react";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  // Helper function to style active links
+  const getLinkStyle = (path) => {
+    const isActive = location.pathname === path;
+    return `flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 ${
+      isActive
+        ? "bg-white/10 text-white"
+        : "text-gray-400 hover:text-white hover:bg-white/5"
+    }`;
+  };
+
   return (
-    <nav className="fixed bottom-6 md:bottom-auto md:top-6 left-1/2 -translate-x-1/2 z-50">
-      <div className="flex items-center gap-2 px-3 py-2 bg-[#1a1a1a]/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl">
+    <nav className="fixed bottom-6 md:top-6 md:bottom-auto left-1/2 -translate-x-1/2 z-50">
+      <div className="flex items-center gap-1 p-1 bg-[#1a1a1a]/80 backdrop-blur-lg border border-white/10 rounded-full shadow-2xl">
 
-        <button className="p-2 bg-white/10 rounded-xl text-white transition-colors">
-          <Home size={20} strokeWidth={1.5} />
-        </button>
+        {/* Home Link */}
+        <Link to="/" className={getLinkStyle("/")}>
+          <Home size={18} strokeWidth={1.5} />
+        </Link>
 
-        {/* About Icon */}
-        <button className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all">
-          <User size={20} strokeWidth={1.5} />
-        </button>
+        {/* About Link */}
+        <Link to="/about" className={getLinkStyle("/about")}>
+          <User size={18} strokeWidth={1.5} />
+          <span className="hidden md:block text-xs font-medium">About</span>
+        </Link>
 
-        {/* Work Icon */}
-        <button className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all">
-          <Briefcase size={20} strokeWidth={1.5} />
-        </button>
+        {/* Work Link */}
+        <Link to="/work" className={getLinkStyle("/work")}>
+          <Briefcase size={18} strokeWidth={1.5} />
+          <span className="hidden md:block text-xs font-medium">Work</span>
+        </Link>
 
-        {/* Divider */}
-        <div className="w-px h-4 bg-white/10 mx-1" />
+        <div className="w-[1px] h-4 bg-white/20 mx-1" />
 
-        {/* Theme Toggle (as seen in your image) */}
         <button className="p-2 text-gray-400 hover:text-white transition-colors">
-          <Sun size={20} strokeWidth={1.5} />
+          <Sun size={18} strokeWidth={1.5} />
         </button>
-
       </div>
     </nav>
   );

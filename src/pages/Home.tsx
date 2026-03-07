@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-export default function Page() {
+export default function Home() {
   return (
     <div className="min-h-screen w-full bg-[#0a0a0a] text-white selection:bg-cyan-500/30 m-0 p-0 overflow-x-hidden">
       <Navbar />
