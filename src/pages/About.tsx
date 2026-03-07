@@ -12,7 +12,6 @@ const About: React.FC<AboutProps> = ({ data }) => {
   return (
     <main className="max-w-6xl mx-auto px-6 pt-32 pb-20 flex gap-20">
 
-      {/* LEFT SIDEBAR: Fixed Navigation */}
       <aside className="hidden lg:block w-64 shrink-0">
         <div className="sticky top-32 space-y-4">
           {navItems.map((item) => (
