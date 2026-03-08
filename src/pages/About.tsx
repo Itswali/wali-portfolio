@@ -1,6 +1,7 @@
 import React from 'react';
 import type { AboutData } from '../data/aboutData';
 import { Github, Linkedin, Mail, Globe } from 'lucide-react';
+import Avatar from "../assets/Avatar.JPG"
 
 interface AboutProps {
   data: AboutData;
@@ -10,9 +11,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
   const navItems = ["Introduction", "Work Experience", "Studies", "Technical Skills"];
 
   return (
-    /* h-screen and overflow-hidden on the parent
-       prevents the entire window from scrolling.
-    */
+
     <div className="h-screen w-full bg-transparent flex flex-col lg:flex-row  text-white overflow-hidden">
 
       {/* LEFT SIDE: Fixed Sidebar */}
@@ -21,7 +20,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
           {/* Profile Header */}
           <div className="space-y-6">
             <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10">
-              <img src="/avatar.jpg" alt="Wali Muhammad" className="w-full h-full object-cover" />
+              <img src={Avatar} alt="Wali Muhammad" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-3xl font-bold tracking-tighter">Wali Muhammad</h1>
