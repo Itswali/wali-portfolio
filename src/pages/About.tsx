@@ -1,98 +1,130 @@
 import React from 'react';
 import type { AboutData } from '../data/aboutData';
+import { Github, Linkedin, Mail, Globe } from 'lucide-react';
 
 interface AboutProps {
   data: AboutData;
 }
 
 const About: React.FC<AboutProps> = ({ data }) => {
-  // Navigation items based on sections
   const navItems = ["Introduction", "Work Experience", "Studies", "Technical Skills"];
 
   return (
-    <main className="max-w-6xl mx-auto px-6 pt-32 pb-20 flex gap-20">
+    /* h-screen and overflow-hidden on the parent
+       prevents the entire window from scrolling.
+    */
+    <div className="h-screen w-full flex flex-col lg:flex-row bg-[#0a0a0a] text-white overflow-hidden">
 
-      <aside className="hidden lg:block w-64 shrink-0">
-        <div className="sticky top-32 space-y-4">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(" ", "-")}`}
-              className="block text-sm text-gray-500 hover:text-white transition-colors"
-            >
-              — {item}
-            </a>
-          ))}
+      {/* LEFT SIDE: Fixed Sidebar */}
+      <aside className="w-full lg:w-[450px] p-8 lg:p-24 flex flex-col justify-between border-r border-white/5 bg-[#0a0a0a]">
+        <div className="space-y-8">
+          {/* Profile Header */}
+          <div className="space-y-6">
+            <div className="w-24 h-24 rounded-full overflow-hidden border border-white/10">
+              <img src="/avatar.jpg" alt="Wali Muhammad" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold tracking-tighter">Wali Muhammad</h1>
+              <p className="text-gray-400 mt-2">Full-Stack Web Developer</p>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-widest">
+              <span className="w-2 h-2 bg-orange-500 rounded-full" />
+              Rawalpindi, Pakistan
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:block space-y-4 pt-10">
+            {navItems.map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                className="group flex items-center gap-3 text-sm font-medium text-gray-500 hover:text-white transition-all"
+              >
+                <span className="h-[1px] w-6 bg-gray-800 group-hover:w-12 group-hover:bg-white transition-all" />
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        {/* Social Links at Bottom */}
+        <div className="flex gap-4 pt-8">
+          <a href="#" className="text-gray-500 hover:text-white transition-colors"><Github size={20} /></a>
+          <a href="#" className="text-gray-500 hover:text-white transition-colors"><Linkedin size={20} /></a>
+          <a href="#" className="text-gray-500 hover:text-white transition-colors"><Mail size={20} /></a>
         </div>
       </aside>
 
-      {/* RIGHT SIDEBAR: Content */}
-      <div className="flex-1 space-y-24">
+      {/* RIGHT SIDE: Independent Scroll Area */}
+      <section className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth">
+        <div className="max-w-3xl p-8 lg:p-24 space-y-32">
 
-        {/* Intro Section */}
-        <section id="introduction">
-          <h1 className="text-4xl font-bold mb-6">{data.title}</h1>
-          <p className="text-xl text-gray-400 leading-relaxed">{data.intro.description}</p>
-        </section>
+          {/* Introduction */}
+          <section id="introduction" className="space-y-6">
+            <h1 className="text-3xl font-bold tracking-tighter">Wali Muhammad</h1>
+            <p className="text-2xl text-gray-300 leading-relaxed font-light">
+              {data.intro.description}
+            </p>
+          </section>
 
-        {/* Work Experience */}
-        <section id="work-experience">
-          <h2 className="text-xl font-semibold mb-8">{data.work.title}</h2>
-          <div className="space-y-12">
+          {/* Work Experience */}
+          <section id="work-experience" className="space-y-12">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{data.work.title}</h2>
             {data.work.experiences.map((exp, i) => (
-              <div key={i}>
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-lg font-medium">{exp.company}</h3>
-                    <p className="text-cyan-400 text-sm">{exp.role}</p>
-                  </div>
-                  <span className="text-sm text-gray-500">{exp.timeframe}</span>
+              <div key={i} className="space-y-4">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="text-xl font-semibold">{exp.company}</h3>
+                  <span className="text-sm text-gray-600 font-mono">{exp.timeframe}</span>
                 </div>
-                <ul className="space-y-3 list-disc list-inside text-gray-400 text-sm">
-                  {exp.achievements.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                <p className="text-cyan-400 text-sm">{exp.role}</p>
+                <ul className="space-y-4">
+                  {exp.achievements.map((ach, idx) => (
+                    <li key={idx} className="text-gray-400 text-sm leading-relaxed flex gap-3">
+                      <span className="text-white/20 mt-1.5">•</span>
+                      {ach}
+                    </li>
                   ))}
                 </ul>
               </div>
             ))}
-          </div>
-        </section>
+          </section>
 
-        {/* Studies */}
-        <section id="studies">
-          <h2 className="text-xl font-semibold mb-8">{data.studies.title}</h2>
-          <div className="space-y-6">
-            {data.studies.institutions.map((inst, i) => (
-              <div key={i}>
-                <h3 className="font-medium">{inst.name}</h3>
-                <p className="text-sm text-gray-400">{inst.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Technical Skills */}
-        <section id="technical-skills">
-          <h2 className="text-xl font-semibold mb-8">{data.technical.title}</h2>
-          <div className="space-y-8">
-            {data.technical.skills.map((skill, i) => (
-              <div key={i}>
-                <h3 className="font-medium mb-2">{skill.title}</h3>
-                <p className="text-sm text-gray-400 mb-4">{skill.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {skill.tags.map((tag, t) => (
-                    <span key={t} className="px-3 py-1 border border-white/10 rounded-full text-xs">
-                      {tag.name}
-                    </span>
-                  ))}
+          {/* Studies */}
+          <section id="studies" className="space-y-10">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{data.studies.title}</h2>
+            <div className="space-y-8">
+              {data.studies.institutions.map((inst, i) => (
+                <div key={i}>
+                  <h3 className="text-lg font-medium">{inst.name}</h3>
+                  <p className="text-gray-400 mt-1">{inst.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
-      </div>
-    </main>
+          {/* Technical Skills */}
+          <section id="technical-skills" className="space-y-12 pb-20">
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{data.technical.title}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {data.technical.skills.map((skill, i) => (
+                <div key={i} className="p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+                  <h3 className="font-medium text-white mb-4">{skill.title}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skill.tags.map((tag, t) => (
+                      <span key={t} className="px-3 py-1 rounded-full bg-white/5 text-[10px] font-mono text-gray-400 border border-white/10">
+                        {tag.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+        </div>
+      </section>
+    </div>
   );
 };
 
