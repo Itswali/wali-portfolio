@@ -58,7 +58,9 @@ const About: React.FC<AboutProps> = ({ data }) => {
 
       {/* RIGHT SIDE: Independent Scroll Area */}
       <section className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth">
+
         <div className="max-w-3xl p-8 lg:p-24 space-y-32">
+
 
           {/* Introduction */}
           <section id="introduction" className="space-y-6">
