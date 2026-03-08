@@ -13,10 +13,10 @@ const About: React.FC<AboutProps> = ({ data }) => {
     /* h-screen and overflow-hidden on the parent
        prevents the entire window from scrolling.
     */
-    <div className="h-screen w-full flex flex-col lg:flex-row bg-[#0a0a0a] text-white overflow-hidden">
+    <div className="h-screen w-full bg-transparent flex flex-col lg:flex-row  text-white overflow-hidden">
 
       {/* LEFT SIDE: Fixed Sidebar */}
-      <aside className="w-full lg:w-[450px] p-8 lg:p-24 flex flex-col justify-between border-r border-white/5 bg-[#0a0a0a]">
+      <aside className="w-full lg:w-[450px] p-8 lg:p-24 flex flex-col justify-between border-r border-white/5 ">
         <div className="space-y-8">
           {/* Profile Header */}
           <div className="space-y-6">

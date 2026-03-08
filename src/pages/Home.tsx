@@ -2,13 +2,13 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full bg-[#0a0a0a] text-white selection:bg-cyan-500/30 m-0 p-0 overflow-x-hidden">
+    <div className="min-h-screen w-full  text-white selection:bg-cyan-500/30 m-0 p-0 overflow-x-hidden">
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 pt-32 pb-32 md:pb-12">
         {/* Profile Pill */}
         <div className="flex justify-center mb-12">
-          <div className="flex items-center gap-2 px-4 py-1.5 bg-[#161616] border border-white/10 rounded-full hover:border-white/20 transition-colors cursor-pointer">
+          <div className="flex items-center gap-2 px-4 py-1.5 border border-white/10 rounded-full hover:border-white/20 transition-colors cursor-pointer">
 
             <span className="text-sm font-medium text-gray-300">
               Recent Project | BookHive
@@ -27,7 +27,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center mb-12">
-          <div className="flex items-center gap-2 px-4 py-1.5 bg-[#161616] border border-white/10 rounded-full hover:border-white/20 transition-colors cursor-pointer">
+          <div className="flex items-center gap-2 px-4 py-1.5  border border-white/10 rounded-full hover:border-white/20 transition-colors cursor-pointer">
 
             <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-orange-400 to-purple-500 overflow-hidden" />
             <span className="text-sm font-medium text-gray-300">

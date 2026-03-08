@@ -10,10 +10,8 @@ import { aboutData } from "./data/aboutData";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen w-full bg-[#0a0a0a] text-white overflow-x-hidden m-0 p-0">
-
+      <div className="min-h-screen w-full text-white overflow-x-hidden m-0 p-0">
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About data={aboutData}/>} />
