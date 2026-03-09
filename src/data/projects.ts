@@ -32,7 +32,7 @@ export const projects: Project[] = [
   },
     {
     id: '3',
-    image: 'img/mealsDB.png',
+    image: '',
     title: 'MealsDb',
     infoProject: ['CANOPY', 'Full Stack Dev', '2022'],
     description: 'This is a single page dynamic web app that show meals Description , Recipes and You can find your favorite meal by searching it , Its using API to load all the data and images.',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     id: '4',
-    image: '../assets/BookStoore.png',
+    image: '',
     title: 'Book Store',
     infoProject: ['Books', 'Full Stack Dev', '2022'],
     description: 'This is a Bookstore web app created with React & Redux. A user can add a book with his author and category also can track its progress.',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   },
   {
     id: '5',
-    image: 'img/SpaceStore.png',
+    image: '',
     title: 'Space Store',
     infoProject: ['CANOPY', 'Front End Development', '2022'],
     description: 'The Space Travelers Hub is a React App. It consists of Rockets, Missions, and the My Profile section. It uses Redux as a state management tool. You can join missions and reserve rockets and see them in Profile Section.',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
   },
   {
     id: '6',
-    image: 'img/GPT3.png',
+    image: '',
     title: 'GPT3',
     infoProject: ['CANOPY', 'Front End Development', '2022'],
     description: 'This is a single page dynamic web app that display the deatils of what GPT3 is and its information with appealing design.',
