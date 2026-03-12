@@ -53,9 +53,12 @@ export const aboutData: AboutData = {
         timeframe: "July 2024 - Present",
         role: "Full-Stack Web Developer",
         achievements: [
-           "Engineered a secure authentication system using Better-Auth",
-           "Implemented Server Actions for real-time CRUD operations.",
-          "Developed a digital library platform with Role-Based Access Control (RBAC)."
+           "Engineered high-performance data flows using Next.js Server Actions, which reduced traditional API boilerplate and enabled seamless, real-time CRUD operations.",
+           "Architected a robust security layer by integrating Better-Auth with Role-Based Access Control (RBAC), ensuring secure session management and granular permission levels across platforms.",
+           "Streamlined complex state management using a combination of Zustand, Redux, and React Context API to maintain predictable data flow in large-scale applications.",
+           "Developed responsive, accessible User Interfaces with Tailwind CSS and Shadcn UI, implementing features like automatic board provisioning and smooth-scroll navigation for enhanced UX.",
+           "Maintained high code reliability through Test-Driven Development (TDD), utilizing Jest and Vitest to perform unit testing and ensure component stability in agile environments.",
+          "Optimized application performance by leveraging Next.js 15 Server Components and Memoization (useMemo, useCallback), significantly reducing client-side JavaScript bundles and improving SEO."
         ],
         images: [],
       },]
@@ -82,6 +85,17 @@ export const aboutData: AboutData = {
         tags: [
           { name: "React", icon: "react" },
           { name: "TypeScript", icon: "typescript" },
+          {name: "Next", icon: "next"},
+        ],
+        images: [],
+      },
+      {
+        title: "Backend Developer",
+        description: "Expert in Node and Mongoose,",
+        tags: [
+          {name: "Node", icon: "node"},
+          {name: "Mongoose", icon: "mongoose"},
+          {name: "Javascript", icon: "JavaScript"},
         ],
         images: [],
       },
