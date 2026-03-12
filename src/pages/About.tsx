@@ -16,10 +16,10 @@ const About: React.FC<AboutProps> = ({ data }) => {
   ];
 
   return (
-    <div className="h-screen w-full bg-black flex flex-col lg:flex-row text-white overflow-hidden font-sans">
+    <div className="h-screen w-full  flex flex-col lg:flex-row text-white overflow-hidden font-sans">
 
       {/* LEFT SIDE: Fixed Sidebar (Based on Hamid's Design) */}
-      <aside className="w-full lg:w-[480px] p-8 lg:p-20 flex flex-col justify-between items-center lg:items-start border-r border-white/5 bg-black/50 backdrop-blur-sm">
+      <aside className="w-full lg:w-[480px] p-8 lg:p-20 flex flex-col justify-between items-center lg:items-start border-r border-white/5 bg-black/30 backdrop-blur-sm">
         <div className="flex flex-col items-center lg:items-start space-y-10 w-full">
 
           {/* Avatar & Location */}
@@ -59,20 +59,20 @@ const About: React.FC<AboutProps> = ({ data }) => {
 
         {/* Social Links */}
         <div className="flex gap-6 pt-10">
-          <a href="#" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Github size={22} /></a>
-          <a href="#" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Linkedin size={22} /></a>
-          <a href="#" className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Mail size={22} /></a>
+          <a href="https://github.com/Itswali" target='blank' className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Github size={22} /></a>
+          <a href="www.linkedin.com/in/its-wali/" target='blank' className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Linkedin size={22} /></a>
+          <a href="mailto:luckywali0986@gmail.com" target='blank' className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-all"><Mail size={22} /></a>
         </div>
       </aside>
 
       {/* RIGHT SIDE: Content Area */}
-      <section className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth bg-[#030303]">
+      <section className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth ">
         <div className="max-w-4xl mx-auto px-8 lg:px-24 py-20 lg:py-32 space-y-40">
 
           {/* Introduction with Hamid's Header Style */}
           <section id="introduction" className="space-y-8">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-xs font-bold hover:bg-cyan-500/10 transition-colors cursor-pointer group">
-              Check my resume <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <a href="">Check my resume</a> <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </div>
 
             <h1 className="text-7xl font-extrabold tracking-tighter text-white">Wali Muhammad</h1>

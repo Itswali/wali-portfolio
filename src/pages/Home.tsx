@@ -36,14 +36,14 @@ export default function Home() {
         <section className="max-w-5xl mx-auto mb-32">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Featured Work</h2>
-            <Link href="/work" className="text-sm text-cyan-400 hover:underline flex items-center gap-1">
+            <Link to="/work" className="text-sm text-cyan-400 hover:underline flex items-center gap-1">
               View All Projects <ArrowRight size={14} />
             </Link>
           </div>
 
           <div className="group relative bg-white/[0.02] border border-white/10 rounded-[2.5rem] overflow-hidden hover:border-white/20 transition-all duration-500">
             <div className="grid md:grid-cols-2 gap-8 items-center">
-              {/* Project Image */}
+
               <div className="aspect-square md:aspect-video overflow-hidden">
                 <img
                   src={featuredProject.image}
@@ -52,7 +52,7 @@ export default function Home() {
                 />
               </div>
 
-              {/* Project Info */}
+
               <div className="p-8 md:p-12 space-y-6">
                 <div className="flex items-center gap-3 text-xs font-mono text-cyan-400">
                   {featuredProject.infoProject[0]} • {featuredProject.technologies[0]}
