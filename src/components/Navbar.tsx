@@ -4,8 +4,7 @@ import { Home, User, Briefcase, Sun } from "lucide-react";
 const Navbar = () => {
   const location = useLocation();
 
-  // Helper function to style active links
-  const getLinkStyle = (path) => {
+  const getLinkStyle = (path: string) => {
     const isActive = location.pathname === path;
     return `flex items-center gap-2 px-3 py-2 rounded-full transition-all duration-300 ${
       isActive
@@ -35,7 +34,7 @@ const Navbar = () => {
           <span className="hidden md:block text-xs font-medium">Work</span>
         </Link>
 
-        <div className="w-[1px] h-4 bg-white/20 mx-1" />
+        <div className="w-px h-4 bg-white/20 mx-1" />
 
         <button className="p-2 text-gray-400 hover:text-white transition-colors">
           <Sun size={18} strokeWidth={1.5} />

@@ -40,7 +40,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="group relative bg-white/[0.02] border border-white/10 rounded-[2.5rem] overflow-hidden hover:border-white/20 transition-all duration-500">
+          <div className="group relative bg-white/2 border border-white/10 rounded-[2.5rem] overflow-hidden hover:border-white/20 transition-all duration-500">
             <div className="grid md:grid-cols-2 gap-8 items-center">
 
               <div className="aspect-square md:aspect-video overflow-hidden">
@@ -83,7 +83,7 @@ export default function Home() {
             <p className="text-gray-400">Have a project in mind? Let's build something great together.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 bg-white/[0.02] border border-white/10 p-8 md:p-12 rounded-[2.5rem]">
+          <div className="grid md:grid-cols-2 gap-12 bg-white/2 border border-white/10 p-8 md:p-12 rounded-[2.5rem]">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold">Contact Information</h3>
               <p className="text-gray-400 leading-relaxed">

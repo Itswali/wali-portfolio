@@ -19,7 +19,7 @@ const Work = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group relative bg-white/[0.02] border border-white/10 rounded-[2rem] overflow-hidden hover:border-white/20 transition-all duration-500"
+            className="group relative bg-white/2 border border-white/10 rounded-[2rem] overflow-hidden hover:border-white/20 transition-all duration-500"
           >
             {/* Image Container */}
             <div className="aspect-video overflow-hidden">
