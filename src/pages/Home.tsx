@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import { projects } from "../data/projects"; // Import your projects array
+import { projects } from "../data/projects";
 import { Mail, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,6 @@ export default function Home() {
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 pt-32">
-        {/* --- Hero Section --- */}
         <section className="max-w-4xl mx-auto mb-32">
           <div className="flex justify-center mb-12">
             <div className="flex items-center gap-2 px-4 py-1.5 border border-white/10 rounded-full hover:border-white/20 transition-colors cursor-pointer bg-white/5">
@@ -106,7 +105,7 @@ export default function Home() {
               </div>
             </div>
 
-            <form className="space-y-4">
+            <form className="space-y-4" action="https://formspree.io/f/mgebojya" onSubmit={(e) => e.preventDefault()} method="POST">
               <input
                 type="text"
                 name="name"
