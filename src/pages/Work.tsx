@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { projects, type Project } from '../data/projects';
-import { ExternalLink, Github, X } from 'lucide-react';
+import React, { useState } from "react";
+import { projects, type Project } from "../data/projects";
+import { ExternalLink, Github, X } from "lucide-react";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -8,7 +8,9 @@ const Work = () => {
   return (
     <section id="work" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="mb-16">
-        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">Portfolio</h2>
+        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">
+          Portfolio
+        </h2>
         <h3 className="text-4xl font-bold text-white">Featured Projects</h3>
       </div>
 
@@ -34,17 +36,24 @@ const Work = () => {
                 {project.infoProject.map((info, i) => (
                   <React.Fragment key={i}>
                     <span>{info}</span>
-                    {i < project.infoProject.length - 1 && <span className="w-1 h-1 bg-white/20 rounded-full" />}
+                    {i < project.infoProject.length - 1 && (
+                      <span className="w-1 h-1 bg-white/20 rounded-full" />
+                    )}
                   </React.Fragment>
                 ))}
               </div>
 
               <h4 className="text-2xl font-bold text-white">{project.title}</h4>
-              <p className="text-gray-400 text-sm line-clamp-2">{project.description}</p>
+              <p className="text-gray-400 text-sm line-clamp-2">
+                {project.description}
+              </p>
 
               <div className="flex flex-wrap gap-2 pt-2">
                 {project.technologies.slice(0, 3).map((tech) => (
-                  <span key={tech} className="px-3 py-1 rounded-full bg-white/5 text-[10px] font-mono text-gray-400 border border-white/10">
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-full bg-white/5 text-[10px] font-mono text-gray-400 border border-white/10"
+                  >
                     {tech}
                   </span>
                 ))}
@@ -74,37 +83,67 @@ const Work = () => {
 
             <div className="p-8 md:p-12 space-y-8">
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold text-white">{selectedProject.title}</h2>
+                <h2 className="text-4xl font-bold text-white">
+                  {selectedProject.title}
+                </h2>
                 <div className="flex items-center gap-4 text-sm font-mono text-cyan-400">
-                   {selectedProject.infoProject.join(' • ')}
+                  {selectedProject.infoProject.join(" • ")}
                 </div>
               </div>
 
               <div className="aspect-video rounded-3xl overflow-hidden border border-white/5">
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2">
-                  <p className="text-gray-300 text-lg leading-relaxed">{selectedProject.description}</p>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    {selectedProject.description}
+                  </p>
                 </div>
 
                 <div className="space-y-8">
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.technologies.map((tech) => (
-                      <span key={tech} className="px-3 py-1 rounded-md bg-white/5 text-xs text-gray-400 border border-white/10">
+                      <span
+                        key={tech}
+                        className="px-3 py-1 rounded-md bg-white/5 text-xs text-gray-400 border border-white/10"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
-
+                  {/* Action Buttons Container */}
                   <div className="flex flex-col gap-3">
-                    <a href={selectedProject.linkLiveVersion} target="_blank" className="flex items-center justify-center gap-2 py-3 bg-cyan-500 text-white rounded-xl font-medium hover:bg-cyan-600 transition-all">
+                    {/* Live Demo Link */}
+                    <a
+                      href={selectedProject.linkLiveVersion}
+                      target="_blank"
+                      className="flex items-center justify-center gap-2 py-3 bg-cyan-500 text-white rounded-xl font-medium hover:bg-cyan-600 transition-all"
+                    >
                       See Live <ExternalLink size={18} />
                     </a>
-                    <a href={selectedProject.linkSource} target="_blank" className="flex items-center justify-center gap-2 py-3 bg-white/5 text-white border border-white/10 rounded-xl font-medium hover:bg-white/10 transition-all">
+
+                    {/* Source Code Link */}
+                    <a
+                      href={selectedProject.linkSource}
+                      target="_blank"
+                      className="flex items-center justify-center gap-2 py-3 bg-white/5 text-white border border-white/10 rounded-xl font-medium hover:bg-white/10 transition-all"
+                    >
                       Source Code <Github size={18} />
                     </a>
+
+                    {/* Cancel Button */}
+                    <button
+                      onClick={() => setSelectedProject(null)}
+                      className="flex items-center justify-center gap-2 py-3 bg-transparent text-gray-400 border border-white/5 rounded-xl font-medium hover:bg-white/5 hover:text-white transition-all"
+                    >
+                      Cancel
+                    </button>
                   </div>
                 </div>
               </div>

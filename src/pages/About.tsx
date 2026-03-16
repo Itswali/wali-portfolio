@@ -117,23 +117,39 @@ const About: React.FC<AboutProps> = ({ data }) => {
           </section>
 
           {/* Technical Skills */}
-          <section id="technical-skills" className="space-y-16 pb-32">
-            <h2 className="text-4xl font-bold tracking-tight text-white border-b border-white/5 pb-6">Technical skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {data.technical.skills.map((skill, i) => (
-                <div key={i} className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all">
-                  <h3 className="font-bold text-lg text-white mb-6 uppercase tracking-widest text-xs text-cyan-500">{skill.title}</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.tags.map((tag, t) => (
-                      <span key={t} className="px-4 py-2 rounded-xl bg-white/5 text-[11px] font-bold text-gray-300 border border-white/5 hover:border-cyan-500/50 transition-colors">
-                        {tag.name}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+<section id="technical-skills" className="space-y-16 pb-32 max-w-4xl">
+  <h2 className="text-4xl font-bold tracking-tight text-white border-b border-white/5 pb-6">
+    Technical skills
+  </h2>
+
+  <div className="flex flex-col gap-12">
+    {data.technical.skills.map((skill, i) => (
+      <div key={i} className="space-y-4 group">
+        {/* Category Title */}
+        <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+          {skill.title}
+        </h3>
+
+        {/* Professional Description */}
+        <p className="text-gray-400 leading-relaxed text-lg">
+          {skill.description}
+        </p>
+
+        {/* Inline Tags */}
+        <div className="flex flex-wrap gap-x-4 gap-y-2 pt-2">
+  {skill.tags.map((tag, t) => (
+    <span
+      key={t}
+      className="text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-500/80"
+    >
+      {tag} {t < skill.tags.length - 1 && "•"}
+    </span>
+  ))}
+</div>
+      </div>
+    ))}
+  </div>
+</section>
 
         </div>
       </section>

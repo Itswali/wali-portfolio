@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800',
+    image: 'src/assets/global-summit.png',
     title: 'Global-Summit',
     infoProject: ['Global Summit', 'Full Stack Dev', '2022'],
     description: 'This is a UN Refugee Advert page for an annual Summit meeting held in America. Featuring global speakers and key topics.',

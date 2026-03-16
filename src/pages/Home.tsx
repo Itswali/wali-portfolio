@@ -93,11 +93,15 @@ export default function Home() {
 
               <div className="flex items-center gap-4 text-cyan-400">
                 <div className="p-3 bg-cyan-400/10 rounded-xl">
+                  <a href="mailto:luckywali0986@gmail.com">
                   <Mail size={24} />
+                  </a>
                 </div>
                 <div>
+                  <a href="mailto:luckywali0986@gmail.com">
                   <p className="text-xs text-gray-500 uppercase font-bold">Email me at</p>
                   <p className="text-lg">luckywali0986@gmail.com</p>
+                </a>
                 </div>
               </div>
             </div>

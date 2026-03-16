@@ -76,29 +76,29 @@ export const aboutData: AboutData = {
       },
     ],
   },
-  technical: {
-    title: "Technical Skills",
-    skills: [
-      {
-        title: "Frontend Architecture",
-        description: "Expert in React, Shadcn UI, and Tailwind CSS.",
-        tags: [
-          { name: "React", icon: "react" },
-          { name: "TypeScript", icon: "typescript" },
-          {name: "Next", icon: "next"},
-        ],
-        images: [],
-      },
-      {
-        title: "Backend Developer",
-        description: "Expert in Node and Mongoose,",
-        tags: [
-          {name: "Node", icon: "node"},
-          {name: "Mongoose", icon: "mongoose"},
-          {name: "Javascript", icon: "JavaScript"},
-        ],
-        images: [],
-      },
-    ],
-  }
+technical: {
+  title: "Technical Skills",
+  skills: [
+    {
+      title: "Full-Stack Architecture",
+      description: "Expert in the modern React ecosystem, focusing on performance optimization through memoization and server-side rendering. Proficient in building highly interactive interfaces using Next.js 15, TypeScript, and Shadcn UI to deliver pixel-perfect, accessible user experiences.",
+      tags: ["Next.js 15", "React", "TypeScript", "Tailwind CSS"],
+    },
+    {
+      title: "Backend & API Integration",
+      description: "Experienced in building scalable server-side logic and secure backends using Node.js and Express Skilled in implementing Server Actions for real-time CRUD operations and integrating MongoDB with Mongoose for robust data modeling.",
+      tags: ["Node.js", "Express", "Mongoose", "MongoDB"],
+    },
+    {
+      title: "Authentication & Security",
+      description: "Proven track record of engineering secure authentication systems using Better-Auth with session-based security. Expert in implementing Role-Based Access Control (RBAC) to manage complex user permissions and ensure data integrity.",
+      tags: ["Better-Auth", "RBAC", "Auth Guards"],
+    },
+    {
+      title: "State Management & Testing",
+      description: "Strong command of state management tools including Redux, Zustand, and React Hooks to maintain clean, reactive code structures. Committed to high code quality through Test-Driven Development (TDD) using Jest and Vitest.",
+      tags: ["Redux", "Zustand", "Jest", "TDD"],
+    },
+  ],
+}
 }
