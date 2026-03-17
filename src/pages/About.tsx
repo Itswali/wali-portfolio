@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AboutData } from '../data/aboutData';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
-import Avatar from "../assets/Avatar.JPG"
+import Avatar from "../assets/avatar.png"
 
 interface AboutProps {
   data: AboutData;
@@ -19,13 +19,13 @@ const About: React.FC<AboutProps> = ({ data }) => {
     <div className="h-screen w-full  flex flex-col lg:flex-row text-white overflow-hidden font-sans">
 
       {/* LEFT SIDE: Fixed Sidebar (Based on Hamid's Design) */}
-      <aside className="w-full lg:w-[480px] p-8 lg:p-20 flex flex-col justify-between items-center lg:items-start border-r border-white/5 bg-black/30 backdrop-blur-sm">
+      <aside className="w-full lg:w-120 p-8 lg:p-20 flex flex-col justify-between items-center lg:items-start border-r border-white/5 bg-black/30 backdrop-blur-sm">
         <div className="flex flex-col items-center lg:items-start space-y-10 w-full">
 
           {/* Avatar & Location */}
           <div className="flex flex-col items-center lg:items-start space-y-6">
             <div className="relative group">
-               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+               <div className="absolute -inset-1 bg-linear-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-white/10">
                  <img src={Avatar} alt="Wali Muhammad" className="w-full h-full object-cover" />
                </div>
@@ -50,7 +50,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
                 href={`#${item.id}`}
                 className="group flex items-center gap-4 text-xs uppercase tracking-[0.3em] font-bold text-gray-500 hover:text-white transition-all"
               >
-                <span className="h-[1px] w-8 bg-gray-800 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
+                <span className="h-px w-8 bg-gray-800 group-hover:w-16 group-hover:bg-white transition-all duration-500" />
                 {item.name}
               </a>
             ))}
