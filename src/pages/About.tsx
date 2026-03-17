@@ -142,7 +142,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
       key={t}
       className="text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-500/80"
     >
-      {tag} {t < skill.tags.length - 1 && "•"}
+      {tag.name} {t < skill.tags.length - 1 && "•"}
     </span>
   ))}
 </div>
