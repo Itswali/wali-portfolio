@@ -47,8 +47,8 @@ export const projects: Project[] = [
   },
   {
     id: '4',
-    image: 'src/assets/gpt3.png',
-    title: gpt3,
+    image: gpt3,
+    title: 'gpt3',
     infoProject: ['CANOPY', 'Front End Development', '2022'],
     description: 'This is a single page dynamic web app that display the deatils of what GPT3 is and its information with appealing design.',
     technologies: ['html', 'Scss', 'React'],
