@@ -1,3 +1,8 @@
+import mealsDB from "../assets/mealsdb.png";
+import GlobalS from "../assets/global-summit.png";
+import gpt3 from "../assets/gpt3.png";
+import bookhive from "../assets/Bookhive.png";
+
 export interface Project {
   id: string;
   image: string;
@@ -12,7 +17,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    image: 'src/assets/global-summit.png',
+    image: GlobalS,
     title: 'Global-Summit',
     infoProject: ['Global Summit', 'Full Stack Dev', '2022'],
     description: 'This is a UN Refugee Advert page for an annual Summit meeting held in America. Featuring global speakers and key topics.',
@@ -22,7 +27,7 @@ export const projects: Project[] = [
   },
     {
     id: '2',
-    image: 'src/assets/mealsdb.png',
+    image: mealsDB,
     title: 'MealsDb',
     infoProject: ['CANOPY', 'Full Stack Dev', '2022'],
     description: 'This is a single page dynamic web app that show meals Description , Recipes and You can find your favorite meal by searching it , Its using API to load all the data and images.',
@@ -32,7 +37,7 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    image: 'src/assets/Bookhive.png',
+    image: bookhive,
     title: 'Book Hive',
     infoProject: ['Books', 'MERN Stack Dev', '2026'],
     description: 'BOOKHIVE is a robust, full-stack digital library platform designed to allow users to securely browse, read, and manage a catalog of digital books. Built on the MERN Stack (MongoDB, Express, React, Node.js), it features comprehensive Role-Based Access Control (RBAC) to differentiate between regular users and system administrators.',
@@ -43,7 +48,7 @@ export const projects: Project[] = [
   {
     id: '4',
     image: 'src/assets/gpt3.png',
-    title: 'GPT3',
+    title: gpt3,
     infoProject: ['CANOPY', 'Front End Development', '2022'],
     description: 'This is a single page dynamic web app that display the deatils of what GPT3 is and its information with appealing design.',
     technologies: ['html', 'Scss', 'React'],
