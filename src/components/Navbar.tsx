@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Briefcase, Sun } from "lucide-react";
+import { Home, User, Briefcase } from "lucide-react";
 
 const Navbar = () => {
   const location = useLocation();
@@ -34,11 +34,11 @@ const Navbar = () => {
           <span className="hidden md:block text-xs font-medium">Work</span>
         </Link>
 
-        <div className="w-px h-4 bg-white/20 mx-1" />
+        {/* <div className="w-px h-4 bg-white/20 mx-1" />
 
         <button className="p-2 text-gray-400 hover:text-white transition-colors">
           <Sun size={18} strokeWidth={1.5} />
-        </button>
+        </button> */}
       </div>
     </nav>
   );

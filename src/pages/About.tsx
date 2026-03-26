@@ -72,7 +72,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
           {/* Introduction with Hamid's Header Style */}
           <section id="introduction" className="space-y-8">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-xs font-bold hover:bg-cyan-500/10 transition-colors cursor-pointer group">
-              <a href="">Check my resume</a> <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <a href="https://drive.google.com/file/d/11wwQlHA9tZ6uHcjhGV8i25N4413BfiF5/view?usp=sharing" target='blank'>Check my resume</a> <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </div>
 
             <h1 className="text-7xl font-extrabold tracking-tighter text-white">Wali Muhammad</h1>
@@ -142,7 +142,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
       key={t}
       className="text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-500/80"
     >
-      {tag} {t < skill.tags.length - 1 && "•"}
+      {tag.name} {t < skill.tags.length - 1 && "•"}
     </span>
   ))}
 </div>

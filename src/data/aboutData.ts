@@ -4,7 +4,6 @@ import type { ReactNode } from "react";
 
 interface Tag {
   name: string;
-  icon: string;
 }
 
 interface Experience {
@@ -82,22 +81,45 @@ technical: {
     {
       title: "Full-Stack Architecture",
       description: "Expert in the modern React ecosystem, focusing on performance optimization through memoization and server-side rendering. Proficient in building highly interactive interfaces using Next.js 15, TypeScript, and Shadcn UI to deliver pixel-perfect, accessible user experiences.",
-      tags: ["Next.js 15", "React", "TypeScript", "Tailwind CSS"],
+      tags: [
+        {name: "Next.js 15"},
+        {name: "React"},
+        {name: "TypeScript"},
+        {name: "Tailwind CSS"}
+      ],
+      images: [],
     },
     {
       title: "Backend & API Integration",
       description: "Experienced in building scalable server-side logic and secure backends using Node.js and Express Skilled in implementing Server Actions for real-time CRUD operations and integrating MongoDB with Mongoose for robust data modeling.",
-      tags: ["Node.js", "Express", "Mongoose", "MongoDB"],
+      tags: [
+        {name: "Node.js"},
+        { name: "Express"},
+        {name: "Mongoose"},
+        {name: "MongoDB"}
+      ],
+      images: [],
     },
     {
       title: "Authentication & Security",
       description: "Proven track record of engineering secure authentication systems using Better-Auth with session-based security. Expert in implementing Role-Based Access Control (RBAC) to manage complex user permissions and ensure data integrity.",
-      tags: ["Better-Auth", "RBAC", "Auth Guards"],
+      tags: [
+        {name: "Better-Auth"},
+        {name: "RBAC"},
+        {name:  "Auth Guards"},
+      ],
+      images: [],
     },
     {
       title: "State Management & Testing",
       description: "Strong command of state management tools including Redux, Zustand, and React Hooks to maintain clean, reactive code structures. Committed to high code quality through Test-Driven Development (TDD) using Jest and Vitest.",
-      tags: ["Redux", "Zustand", "Jest", "TDD"],
+      tags: [
+        {name: "Redux"},
+        {name: "Zustand"},
+        {name: "Jest"},
+        {name: "TDD"},
+      ],
+      images: [],
     },
   ],
 }
