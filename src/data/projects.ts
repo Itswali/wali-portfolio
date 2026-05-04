@@ -1,8 +1,8 @@
 import mealsDB from "../assets/mealsdb.png";
-import GlobalS from "../assets/global-summit.png";
 import gpt3 from "../assets/gpt3.png";
 import bookhive from "../assets/Bookhive.png";
-
+import jobtracker from "../assets/job-tracker.png";
+import devflow from "../assets/devflow.png";
 export interface Project {
   id: string;
   image: string;
@@ -17,23 +17,23 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: '1',
-    image: GlobalS,
-    title: 'Global-Summit',
-    infoProject: ['Global Summit', 'Full Stack Dev', '2022'],
-    description: 'This is a UN Refugee Advert page for an annual Summit meeting held in America. Featuring global speakers and key topics.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    linkLiveVersion: 'https://itswali.github.io/Global-Summit/',
-    linkSource: 'https://github.com/Itswali/Global-Summit',
+    image: devflow,
+    title: 'DevFlow',
+    infoProject: ['Collaborative', 'Full Stack Development', '2026'],
+    description: 'A real-time collaborative code review and task management platform built for modern development teams. ',
+    technologies: ['NextJs', 'TailwindCss', 'Mongoose'],
+    linkLiveVersion: 'https://dev-flow-fawn.vercel.app/',
+    linkSource: 'https://github.com/Itswali/DevFlow',
   },
-    {
+  {
     id: '2',
-    image: mealsDB,
-    title: 'MealsDb',
-    infoProject: ['CANOPY', 'Full Stack Dev', '2022'],
-    description: 'This is a single page dynamic web app that show meals Description , Recipes and You can find your favorite meal by searching it , Its using API to load all the data and images.',
-    technologies: ['html', 'css', 'javaScript'],
-    linkLiveVersion: 'https://itswali.github.io/MealsDB/',
-    linkSource: 'https://github.com/Itswali/MealsDB/',
+    image: jobtracker,
+    title: 'Job-Tracker',
+    infoProject: ['Job Tracker', 'Full Stack Dev', '2026'],
+    description: 'Job Tracker is a high-performance, full-stack Kanban application designed to centralize and simplify the job search experience. Built with the Next.js 15 App Router and TypeScript, it transforms the often overwhelming process of career hunting into a structured, visual workflow.',
+    technologies: ['NEXTJS', 'Tailwind CSS', 'TypeScript'],
+    linkLiveVersion: 'https://job-tracker-9cry.vercel.app/',
+    linkSource: 'https://github.com/Itswali/Job-Tracker',
   },
   {
     id: '3',
@@ -45,8 +45,18 @@ export const projects: Project[] = [
     linkLiveVersion: 'https://book-hives.netlify.app/',
     linkSource: 'https://github.com/Itswali/BOOK-HIVE',
   },
-  {
+    {
     id: '4',
+    image: mealsDB,
+    title: 'MealsDb',
+    infoProject: ['CANOPY', 'Full Stack Dev', '2022'],
+    description: 'This is a single page dynamic web app that show meals Description , Recipes and You can find your favorite meal by searching it , Its using API to load all the data and images.',
+    technologies: ['html', 'css', 'javaScript'],
+    linkLiveVersion: 'https://itswali.github.io/MealsDB/',
+    linkSource: 'https://github.com/Itswali/MealsDB/',
+  },
+  {
+    id: '5',
     image: gpt3,
     title: 'gpt3',
     infoProject: ['CANOPY', 'Front End Development', '2022'],
@@ -55,5 +65,6 @@ export const projects: Project[] = [
     linkLiveVersion: 'https://gpt-3-z9vl.onrender.com/',
     linkSource: 'https://github.com/Itswali/GPT3/',
   },
+
 
 ];

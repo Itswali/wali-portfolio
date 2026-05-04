@@ -4,7 +4,7 @@ import { Mail, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const featuredProject = projects[1];
+  const featuredProject = projects[0];
 
   return (
     <div className="min-h-screen w-full text-white selection:bg-cyan-500/30 m-0 p-0 overflow-x-hidden">

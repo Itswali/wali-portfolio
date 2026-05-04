@@ -71,7 +71,7 @@ const About: React.FC<AboutProps> = ({ data }) => {
           {/* Introduction*/}
           <section id="introduction" className="space-y-8">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-xs font-bold hover:bg-cyan-500/10 transition-colors cursor-pointer group">
-              <a href="https://drive.google.com/file/d/1EtOtTXFtqn7Vo_HGkYDhZmnW-mJbEUCk/view" target='blank'>Check my resume</a> <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <a href="https://drive.google.com/file/d/1LwtGy-yFDNpN-4p_pHFJdfZit37ToGl5/view" target='blank'>Check my resume</a> <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </div>
 
             <h1 className="text-7xl font-extrabold tracking-tighter text-white">Wali Muhammad</h1>
