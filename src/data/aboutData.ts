@@ -40,7 +40,7 @@ export interface AboutData {
 export const aboutData: AboutData = {
   path: "/about",
   title: "Wali Muhammad",
-  description: "Full-Stack Web Developer from Rawalpindi, Pakistan",
+  description: "Full-Stack Web Developer from Pakistan",
   intro: {
     title: "Introduction",
     description: "I am a performance-driven Full-Stack Developer with a focus on clean code and intuitive design. I specialize in delivering high-quality applications across the React ecosystem"
